@@ -39,7 +39,9 @@ public class StringProcessor {
         // 2. 선택된 단어를 대문자로 변환
         // 람다 표현식을 사용하세요
 
-        /*
+        /* 
+         * 익명 클래스
+         * 
          * List<String> processedWords = processStrings(words, new StringFilter() {
          * 
          * @Override
