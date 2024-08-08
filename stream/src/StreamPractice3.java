@@ -5,77 +5,37 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.NoSuchElementException;
+import java.util.Optional;
+import java.util.OptionalInt;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
-public class StreamPractice2 {
+public class StreamPractice3 {
     public static void main(String[] args) {
 
         /*
          * 다음 작업을 스트림을 사용하여 수행하세요:
-         * 2. 각 도시별 평균 나이를 구하시오.
+         * 3. 가장 나이가 많은 사람의 이름을 찾으시오.
          */
 
-        // 1. 기본 로직을 이용한 풀이
         List<Person> people = Arrays.asList(
                 new Person("Alice", 25, "New York"),
                 new Person("Bob", 30, "New York"),
                 new Person("Charlie", 35, "New York"),
                 new Person("David", 40, "London"),
                 new Person("Eve", 45, "Paris"),
-                new Person("kevin", 55, "London"));
+                new Person("kevin", 55, "London"),
+                new Person("elin", 55, "Paris"));
 
-        List<String> uniqueCities = new ArrayList<>();
-        for (Person person : people) {
-            if (!uniqueCities.contains(person.getCity())) {
-                uniqueCities.add(person.getCity());
-            }
-        }
+        // 1. 최대 나이 찾기
+        int maxAge = people.stream().mapToInt(p -> p.getAge()).max().orElse(0);
 
-        for (String city : uniqueCities) {
-            int sum = 0;
-            int count = 0;
-            for (Person person : people) {
-                if (person.getCity().equals(city)) {
-                    sum += person.getAge();
-                    count++;
-                }
-            }
-            double avgAge = (double) sum / count;
-            System.out.println(city + ": " + String.format("%.2f", avgAge));
-        }
+        // 2. 최대 나이를 가진 모든 사람 찾기
+        List<Person> oldestPeople = people.stream().filter(person -> person.getAge() == maxAge).collect(Collectors.toList());
 
-        System.out.println("------------------");
-        System.out.println("------------------");
-
-        // 2. Map을 활용한 풀이
-        Map<String, Integer> cityAgeMap = new HashMap<>();
-
-        for (Person person : people) {
-            String city = person.getCity();
-            int age = person.getAge();
-
-            cityAgeMap.putIfAbsent(city, age);
-        }
-
-        for (String city : cityAgeMap.keySet()) {
-            int sum = 0;
-            int count = 0;
-            for (Person person : people) {
-                if (person.getCity().equals(city)) {
-                    sum += person.getAge();
-                    count++;
-                }
-            }
-            double avg = (double) sum / count;
-            System.out.println(city + " / " + avg);
-        }
-        System.out.println("---------------------");
-        System.out.println("---------------------");
-
-        // 3. 스트림
-        people.stream()
-        .collect(Collectors.groupingBy(Person::getCity, Collectors.averagingDouble(Person::getAge)))
-        .forEach((city, avgAge) -> System.out.println(city + " / " + avgAge));
+        // 3. 결과 출력
+        oldestPeople.forEach(p -> System.out.println(p.getName() + " / " + p.getAge()));
 
     }
 }
