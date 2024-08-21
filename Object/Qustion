@@ -1,0 +1,40 @@
+물론이죠. Object 클래스에 대한 이해를 깊게 하기 위한 몇 가지 문제를 제시해 드리겠습니다. 이 문제들을 통해 Object 클래스의 주요 개념과 메서드들을 복습하고 적용해볼 수 있습니다.
+
+1.
+equals() 및 hashCode() 구현하기:
+다음 Book 클래스를 만들고, equals()와 hashCode() 메서드를 적절히 오버라이드하세요.
+Book 클래스는 title(String)과 author(String), year(int)를 필드로 가집니다.
+두 Book 객체는 title과 author가 같으면 동일한 것으로 간주합니다.
+
+2.
+toString() 메서드 오버라이드:
+위에서 만든 Book 클래스의 toString() 메서드를 오버라이드하여
+"제목: [title], 저자: [author], 출판년도: [year]" 형식으로 반환하도록 구현하세요.
+
+3.
+getClass() 활용하기:
+Book 객체와 그 하위 클래스인 Ebook 객체를 생성하고, getClass() 메서드를 사용하여
+두 객체의 클래스 이름을 출력하는 코드를 작성하세요.
+
+4.
+clone() 메서드 구현:
+Book 클래스를 Cloneable 인터페이스를 구현하도록 수정하고,
+clone() 메서드를 오버라이드하여 깊은 복사를 수행하도록 구현하세요.
+
+5.
+hashCode()와 HashMap:
+Book 객체들을 저장하는 HashMap을 생성하고, 같은 title과 author를 가진
+Book 객체를 키로 사용했을 때 어떤 일이 발생하는지 테스트하는 코드를 작성하세요.
+
+6.
+equals()의 대칭성:
+Book 클래스와 AudioBook 클래스(Book을 상속)가 있을 때,
+equals() 메서드의 대칭성을 유지하면서 두 클래스 간의 동등성을 비교하는 방법을 구현하세요.
+
+7.
+finalize() 메서드(deprecated):
+finalize() 메서드가 왜 deprecated 되었는지 설명하고,
+대신 사용할 수 있는 리소스 정리 방법을 제시하세요.
+
+이 문제들을 해결하면서 Object 클래스의 주요 메서드들의 동작 원리와 올바른 사용법을 익힐 수 있습니다. 
+각 문제에 대한 구현이나 설명이 필요하시면 말씀해 주세요.
