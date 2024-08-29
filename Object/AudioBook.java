@@ -1,5 +1,3 @@
-package Object;
-
 public class AudioBook extends Book {
 
     public AudioBook() {

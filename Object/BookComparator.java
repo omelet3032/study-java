@@ -1,5 +1,3 @@
-package Object;
-
 import java.util.Comparator;
 
 /**

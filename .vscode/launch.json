@@ -1,0 +1,63 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "ExceptionExample",
+            "request": "launch",
+            "mainClass": "ExceptionExample",
+            "projectName": "study-java_8b94cae5"
+        },
+        {
+            "type": "java",
+            "name": "LambdaPractice1",
+            "request": "launch",
+            "mainClass": "LambdaPractice1",
+            "projectName": "study-java_8b94cae5"
+        },
+        {
+            "type": "java",
+            "name": "ObjectPractice",
+            "request": "launch",
+            "mainClass": "ObjectPractice",
+            "projectName": "study-java_8b94cae5"
+        },
+        {
+            "type": "java",
+            "name": "StreamPractice1",
+            "request": "launch",
+            "mainClass": "StreamPractice1",
+            "projectName": "study-java_8b94cae5"
+        },
+        {
+            "type": "java",
+            "name": "StreamPractice2",
+            "request": "launch",
+            "mainClass": "StreamPractice2",
+            "projectName": "study-java_8b94cae5"
+        },
+        {
+            "type": "java",
+            "name": "StreamPractice3",
+            "request": "launch",
+            "mainClass": "StreamPractice3",
+            "projectName": "study-java_8b94cae5"
+        },
+        {
+            "type": "java",
+            "name": "StringProcessor",
+            "request": "launch",
+            "mainClass": "StringProcessor",
+            "projectName": "study-java_8b94cae5"
+        }
+    ]
+}
