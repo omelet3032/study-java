@@ -23,7 +23,8 @@ public class ZeroException extends Exception {
     public void printStackTrace() {
         super.printStackTrace();
         // Systempublic class ArithmeticExceptionExample {
-    
+    }
+
     public static int generateArithmeticException() throws ZeroException {
 
         int a = 10;
@@ -36,4 +37,3 @@ public class ZeroException extends Exception {
     }
 }
 
-}
