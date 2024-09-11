@@ -17,5 +17,5 @@ public class Library {
         return "Library [title=" + title + "]";
     }
 
-    
+
 }
