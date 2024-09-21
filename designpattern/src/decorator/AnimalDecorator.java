@@ -22,7 +22,13 @@ public class AnimalDecorator implements Animal {
         return this.cloth;
     }
 
-    // sound 기능 추가
+    @Override
+	public void sleep() {
+        System.out.println("sleep 실행됐나?");
+		this.animal.sleep();
+	}
+
+	// sound 기능 추가
     @Override
     public void sound() {
         this.animal.sound();

@@ -19,21 +19,31 @@ public class Client1 {
         
         AnimalFactory decoratedCatFactory = new DecoratedCatFactory();
         Animal decoratedCat = decoratedCatFactory.createAnimal();
-        
+
         decoratedCat.sound();
-        System.out.println("-----");
+        System.out.println();
+        System.out.println();
         decoratedCat.play();
 
+        System.out.println();
+        System.out.println();
+
+        System.out.println("cat");
+        cat.sleep();
+
+        System.out.println();
+        System.out.println("decoratedCat");
+        decoratedCat.sleep();
 
         // cat.wearCloth("옷");
         
-        System.out.println("-------------");
+        // System.out.println("-------------");
         
         AnimalFactory dogFactory = new DogFactory();
         Animal dog = dogFactory.createAnimal();
 
-        dog.sound();
-        dog.play();
+        // dog.sound();
+        // dog.play();
     }
 
 }

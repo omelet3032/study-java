@@ -12,6 +12,7 @@ public class DecoratedCatFactory extends CatFactory {
 
         Animal cat = super.createAnimal();
         AnimalDecorator decoratedCat = new AnimalDecorator(cat);
+        // Animal decoratedCat = new AnimalDecorator(cat);
 
         Animal proxyCat = (Animal) AnimalProxy.newProxyInstance(decoratedCat);
         

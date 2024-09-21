@@ -1,10 +1,18 @@
 package animal;
 
+import annotation.ProxyAnnotation;
+
 public interface Animal {
 
+    @ProxyAnnotation(true)
     void sound();
-
+    
+    @ProxyAnnotation(false)
     void play();
+
+    default void sleep() {
+        System.out.println("쿨쿨");
+    }
 
     String getName();
 
