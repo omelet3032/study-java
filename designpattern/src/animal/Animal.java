@@ -4,7 +4,7 @@ import annotation.ProxyAnnotation;
 
 public interface Animal {
 
-    @ProxyAnnotation(true)
+    @ProxyAnnotation
     void sound();
     
     @ProxyAnnotation(false)

@@ -6,7 +6,7 @@ public class App {
 
         Car car = new Car();
 
-
+        double a = 1e-9;
         System.out.println(car.toString());
     }
 }
