@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-public class CsvFileReader {
+public class CsvFileReaderBU {
 
 	private List<String[]> list = new ArrayList<>();
 

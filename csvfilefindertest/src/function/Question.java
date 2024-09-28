@@ -2,43 +2,32 @@ package csvfilefindertest.src.function;
 
 public class Question {
 
-    int id;
 
     String concept;
 
     String description;
 
-    public Question() {
-    }
+	public String getConcept() {
+		return concept;
+	}
 
-    public Question(int id, String concept, String description) {
-        this.id = id;
-        this.concept = concept;
-        this.description = description;
-    }
+	public void setConcept(String concept) {
+		this.concept = concept;
+	}
 
-    public int getId() {
-        return id;
-    }
+	public String getDescription() {
+		return description;
+	}
 
-    public void setId(int id) {
-        this.id = id;
-    }
+	public void setDescription(String description) {
+		this.description = description;
+	}
 
-    public String getConcept() {
-        return concept;
-    }
+	@Override
+	public String toString() {
+		return "concept : " + concept + "// description : " + description + "";
+	}
 
-    public void setConcept(String concept) {
-        this.concept = concept;
-    }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
+    
 }

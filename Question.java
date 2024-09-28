@@ -39,4 +39,10 @@ public class Question {
         this.description = description;
     }
 
+	@Override
+	public String toString() {
+		return "Question [id=" + id + ", concept=" + concept + ", description=" + description + "]";
+	}
+
+    
 }
